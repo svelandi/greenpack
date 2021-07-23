@@ -1,6 +1,7 @@
 <?php
 require_once dirname(__DIR__) . "/model/Quotation.php";
 require_once dirname(__DIR__) . "/model/Item.php";
+require_once dirname(__DIR__) . "/model/ItemBox.php";
 require_once dirname(__DIR__) . "/dao/QuotationDao.php";
 require_once(dirname(__DIR__) . "/dao/ProductDao.php");
 require_once(dirname(__DIR__) . "/dao/MeasurementDao.php");
