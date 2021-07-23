@@ -40,7 +40,7 @@ $tabs = $tabProductDao->findByProduct($product);
   <link rel="stylesheet" href="/css/nice-select/nice-select.css">
   <link rel="stylesheet" href="/css/style-product.css">
   <link rel="stylesheet" href="/css/basket.css">
-  <link rel="stylesheet" href="/css/notify-style.css">
+  <!-- <link rel="stylesheet" href="/css/notify-style.css"> -->
   <link href="https://cdn.jsdelivr.net/npm/froala-editor@3.0.0/css/froala_editor.pkgd.min.css" rel="stylesheet" type='text/css' />
   <link rel="stylesheet" href="/css/translate.css">
 
@@ -54,20 +54,22 @@ $tabs = $tabProductDao->findByProduct($product);
   <script src="/js/jquery.easing.1.3.js"></script>
 
   <style>
-     @media screen and (max-width: 500px){
+    @media screen and (max-width: 500px) {
       .flex-direction-nav {
         display: none;
       }
+
       .flex-direction-nav .flex-prev {
         display: none;
-      
+
+      }
+
+      .flex-direction-nav .flex-next {
+        display: none;
+      }
+
     }
 
-    .flex-direction-nav .flex-next {
-      display: none;
-    }
-    
-    }
     .flex-direction-nav {
       display: flex;
       justify-content: center;
@@ -222,9 +224,9 @@ $tabs = $tabProductDao->findByProduct($product);
                   </div>
                   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion-cotizador">
                     <div class="card-body">
-                        <label class="radio-inline" style="margin-left: 10px;">&nbsp;&nbsp;<input type="radio" name="material" value="Productos Secos">&nbsp;&nbsp;&nbsp;Productos Secos</label>
-                        <label class="radio-inline" style="margin-left: 10px;">&nbsp;&nbsp;<input type="radio" name="material" value="Productos Humedos">&nbsp;&nbsp;&nbsp;Productos Humedos</label>
-                        <label class="radio-inline" style="margin-left: 10px;">&nbsp;&nbsp;<input type="radio" name="material" value="Productos Grasos">&nbsp;&nbsp;&nbsp;Productos Grasos</label>
+                      <label class="radio-inline" style="margin-left: 10px;">&nbsp;&nbsp;<input type="radio" name="material" value="Productos Secos">&nbsp;&nbsp;&nbsp;Productos Secos</label>
+                      <label class="radio-inline" style="margin-left: 10px;">&nbsp;&nbsp;<input type="radio" name="material" value="Productos Humedos">&nbsp;&nbsp;&nbsp;Productos Humedos</label>
+                      <label class="radio-inline" style="margin-left: 10px;">&nbsp;&nbsp;<input type="radio" name="material" value="Productos Grasos">&nbsp;&nbsp;&nbsp;Productos Grasos</label>
                     </div>
                   </div>
                 </div>
@@ -422,7 +424,7 @@ $tabs = $tabProductDao->findByProduct($product);
         .prev(".card-header")
         .find(".more-less")
         .toggleClass("fa-plus fa-minus");
-      console.log($(this).attr('id'))
+      //console.log($(this).attr('id'))
       if ($(this).height() > 100) {
         $('.single').css('margin-bottom', '550px')
       } else {
@@ -492,7 +494,7 @@ $tabs = $tabProductDao->findByProduct($product);
     function renderLengths(height, width) {
       $('#length').html('')
       $('#length').append('<option selected disabled>Seleccione</option>')
-      console.log(height, width)
+      //console.log(height, width)
       let measurementsAux = measurements.filter((measurement) => {
         if (measurement.height == height && measurement.width == width) {
           return measurement
@@ -614,9 +616,9 @@ $tabs = $tabProductDao->findByProduct($product);
         })
       } else {
         if ($width == null || $height == null || $length == null) {
+          
           $.notify({
-            message: 'Selecciona las medidas',
-            //title: 'Greenpack',
+            message: 'Seleccione las medidas',
             icon: 'fas fa-exclamation-triangle'
           }, {
             type: 'danger'
@@ -624,8 +626,7 @@ $tabs = $tabProductDao->findByProduct($product);
         }
         if ($material == undefined) {
           $.notify({
-            message: 'Selecciona la materia prima',
-           //title: 'Greenpack',
+            message: 'Seleccione el tipo de producto',
             icon: 'fas fa-exclamation-triangle'
           }, {
             type: 'danger'

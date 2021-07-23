@@ -45,7 +45,7 @@ $tabs = $tabProductDao->findByProduct($product);
   <link rel="stylesheet" href="/css/nice-select/nice-select.css">
   <link rel="stylesheet" href="/css/style-product.css">
   <link rel="stylesheet" href="/css/basket.css">
-  <link rel="stylesheet" href="/css/notify-style.css">
+  <!-- <link rel="stylesheet" href="/css/notify-style.css"> -->
   <link href="https://cdn.jsdelivr.net/npm/froala-editor@3.0.0/css/froala_editor.pkgd.min.css" rel="stylesheet" type='text/css' />
   <link rel="stylesheet" href="/css/translate.css">
 
@@ -476,7 +476,7 @@ $tabs = $tabProductDao->findByProduct($product);
     $('.checkboxPrinting').change(function() {
       if ($(this).prop('checked')) {
         $(this).siblings('.questionPrinting').html('SI')
-        console.log($(this).siblings('.questionPrinting'))
+        //console.log($(this).siblings('.questionPrinting'))
       } else {
         $(this).siblings('.questionPrinting').html('NO')
       }
@@ -504,10 +504,8 @@ $tabs = $tabProductDao->findByProduct($product);
 
       for (let i = 0; i < measurements.length; i++) {
         if (measurements[i].width == width && measurements[i].height == height && measurements[i].length == length) {
-          if ($printing)
-            minQuantity = measurements[i].VentaMinimaImpresa;
-          else
-            minQuantity = measurements[i].VentaMinimaGenerica;
+          if ($printing) minQuantity = measurements[i].VentaMinimaImpresa;
+          else minQuantity = measurements[i].VentaMinimaGenerica;
           break;
         }
       }
@@ -537,7 +535,7 @@ $tabs = $tabProductDao->findByProduct($product);
 
 
     function verifyMinQuantityValue() {
-      
+
       minQuantity
       imput = $('#sst').val()
       if ($('#sst').val() < verifyMinQuantity()) {
@@ -562,7 +560,7 @@ $tabs = $tabProductDao->findByProduct($product);
     $('#btnCotizar').click(() => {
       let $printing = $('#impresion').prop('checked')
       /* let $laminada = $('#laminada').prop('checked')*/
-       /* let $ventanilla = $('#ventanilla').prop('checked') */
+      /* let $ventanilla = $('#ventanilla').prop('checked') */
       let $width = $('#width').val()
       let $height = $('#height').val()
       let $length = $('#length').val()
@@ -590,16 +588,17 @@ $tabs = $tabProductDao->findByProduct($product);
         if ($width == null || $height == null || $length == null) {
           $.notify({
             icon: 'fas fa fa-bell',
-            message: 'Selecciona las Medidas',
+            message: 'Seleccione las Medidas',
 
           }, {
             type: 'danger',
             timer: 3000
           })
+
         }
         if ($material == undefined) {
           $.notify({
-            message: 'Selecciona la Materia Prima',
+            message: 'Seleccione la Materia Prima',
             icon: 'fas fa fa-bell'
           }, {
             type: 'danger'

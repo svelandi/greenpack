@@ -2,6 +2,7 @@
 session_start();
 require_once(dirname(dirname(__DIR__)) . "/model/Quotation.php");
 require_once(dirname(dirname(__DIR__)) . "/model/Item.php");
+require_once(dirname(dirname(__DIR__)) . "/model/ItemBox.php");
 require_once(dirname(dirname(__DIR__)) . "/dao/ProductDao.php");
 require_once(dirname(dirname(__DIR__)) . "/dao/MeasurementDao.php");
 require_once(dirname(dirname(__DIR__)) . "/dao/MaterialDao.php");
