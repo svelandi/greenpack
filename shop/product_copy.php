@@ -607,7 +607,7 @@ $tabs = $tabProductDao->findByProduct($product);
       if ($printing) {
         request.numInks = $numInks
       }
-      if ($width != null && $height != null && $length != null && $material != undefined && $quantity > 999) {
+      if ($width != null && $height != null && $length != null && $material != undefined) {
         $.post('api/add_item.php', request, (data, status) => {
           if (status == 'success') {
             renderCart()
