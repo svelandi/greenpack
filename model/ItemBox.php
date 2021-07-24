@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/Item.php";
+
 class ItemBox extends Item implements JsonSerializable
 {
   private $observations;
@@ -54,13 +55,11 @@ class ItemBox extends Item implements JsonSerializable
 
     $peso = ($AT * $large * $grammage) / 10000000;
     $und = $peso / $pliego;
+    $cost_paper = $und * $this->getMaterial()->getPricePerKg();
 
-    $CPAPER = $und * $this->getMaterial()->getPricePerKg();
-
-    $directCost = $CPAPER;
+    $directCost = $cost_paper;
     return $directCost;
 
-    //return $this->getMaterial()->getPricePerKg() / $this->getMeasurement()->getWindow();
   }
 
   public function setTypeProduct($typeProduct)

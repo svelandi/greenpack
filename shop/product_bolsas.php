@@ -567,7 +567,7 @@ $tabs = $tabProductDao->findByProduct($product);
       let $material = $("input[name='material']:checked").val();
       let $quantity = $('#sst').val()
       debugger;
-      if ($width != null && $height != null && $length != null && $material != undefined && $quantity > 999) {
+      if ($width != null && $height != null && $length != null && $material != undefined) {
         $.post('api/add_item.php', {
           idProduct: `<?= $product->getId(); ?>`,
           width: $width,

@@ -9,25 +9,7 @@ if (!$_GET) {
 $productDao = new ProductDao();
 $product = $productDao->findById($_GET["id"]);
 
-if ($product->getCotizador() == 1) {
+if ($product->getCotizador() == 1)
   include_once('product_bolsas.php');
-} else
+else
   include_once('product_copy.php');
-
-  /* if ($product->getCategory()->getId() == 1) { // bolsas
-  if ($product->getId() == $_ENV["id_sacos"]) {
-    include_once('product_saco.php');
-  } 
-  else if($product->getId() == $_ENV["id_fondo_auto"]){
-    include_once('product_fondo_automatico.php');
-  }else {
-    include_once('product_bolsas.php');
-  }
-} elseif ($product->getCategory()->getId() == 6) { //laminas
-  include_once('product_laminas.php');
-}elseif ($product->getCategory()->getId() == 8) { // bolsas laminadas
-  include_once('product_saco.php');
-} 
-else {
-  include_once('product_copy.php');
-} */
