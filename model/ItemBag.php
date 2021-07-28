@@ -39,6 +39,8 @@ class ItemBag extends Item implements JsonSerializable
       $this->setPrice($directCost * $e2);
     elseif ($quantity >= $e1min &&  $quantity <= $e1max)
       $this->setPrice($directCost * $e1);
+    else
+      $this->setPrice($directCost * 1);
   }
 
   public function calculateDirectCost()

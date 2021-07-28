@@ -549,7 +549,7 @@ $tabs = $tabProductDao->findByProduct($product);
           break;
         }
       }
-      return minQuantity
+      return parseFloat(minQuantity);
     }
 
     $('#length').change(function(e) {
@@ -566,13 +566,13 @@ $tabs = $tabProductDao->findByProduct($product);
     });
 
     function verifyMinQuantityValue() {
-      if ($('#sst').val() < verifyMinQuantity()) {
+      quantityEnter = parseFloat($('#sst').val());
+      if (quantityEnter < verifyMinQuantity()) {
         $('#btnCotizar').addClass("disabled")
         $('#help-quantity').html(`<br><div class="alert alert-danger alert-min-quantity" role="alert"><span>Cantidad minima ${verifyMinQuantity()} unidades. ¿Te gustaría cotizar una menor cantidad? Te invitamos a visitar a nuestro aliado Greenpoint (<a style="color:green" href="//www.greenpointonline.com.co" target="_blank">www.greenpointonline.com.co</a>)</div>`)
         $('#help-quantity').fadeIn()
         $('.single').css('margin-bottom', '600px')
       } else {
-
         $('#btnCotizar').removeClass("disabled")
         $('#help-quantity').fadeOut(400, () => {
           $('#help-quantity').html('')
@@ -616,7 +616,7 @@ $tabs = $tabProductDao->findByProduct($product);
         })
       } else {
         if ($width == null || $height == null || $length == null) {
-          
+
           $.notify({
             message: 'Seleccione las medidas',
             icon: 'fas fa-exclamation-triangle'

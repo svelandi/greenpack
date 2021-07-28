@@ -193,24 +193,7 @@ $tabs = $tabProductDao->findByProduct($product);
                             <span class="questionPrinting">NO</span>
                           </label>
                         </div>
-                        <!-- <div class="col">
-                          <span>Ventanilla:</span>
-                          <br>
-                          <label class="switch">
-                            <input type="checkbox" class="checkboxPrinting" id="ventanilla">
-                            <span class="slider round"></span>
-                            <span class="questionPrinting">NO</span>
-                          </label>
-                        </div>
-                        <div class="col">
-                          <span>Laminada:</span>
-                          <br>
-                          <label class="switch">
-                            <input type="checkbox" class="checkboxPrinting" id="laminada">
-                            <span class="slider round"></span>
-                            <span class="questionPrinting">NO</span>
-                          </label>
-                        </div> -->
+
                       </div>
                     </div>
                   </div>
@@ -509,7 +492,7 @@ $tabs = $tabProductDao->findByProduct($product);
           break;
         }
       }
-      return minQuantity
+      return parseFloat(minQuantity);
     }
 
     $('#length').change(function(e) {
@@ -537,8 +520,8 @@ $tabs = $tabProductDao->findByProduct($product);
     function verifyMinQuantityValue() {
 
       minQuantity
-      imput = $('#sst').val()
-      if ($('#sst').val() < verifyMinQuantity()) {
+      quantityEnter = parseFloat($('#sst').val());
+      if (quantityEnter < verifyMinQuantity()) {
         $('#btnCotizar').addClass("disabled")
         $('#help-quantity').html(`<br><div class="alert alert-danger alert-min-quantity" role="alert"><span>Cantidad minima ${verifyMinQuantity()} unidades. ¿Te gustaría cotizar menores cantidades? Te invitamos a visitar a nuestro aliado Greenpoint (<a style="color:green" href="//www.greenpointonline.com.co" target="_blank">www.greenpointonline.com.co</a>)</div>`)
         $('#help-quantity').fadeIn()
@@ -559,14 +542,12 @@ $tabs = $tabProductDao->findByProduct($product);
     // agregar un producto al carrito
     $('#btnCotizar').click(() => {
       let $printing = $('#impresion').prop('checked')
-      /* let $laminada = $('#laminada').prop('checked')*/
-      /* let $ventanilla = $('#ventanilla').prop('checked') */
       let $width = $('#width').val()
       let $height = $('#height').val()
       let $length = $('#length').val()
       let $material = $("input[name='material']:checked").val();
       let $quantity = $('#sst').val()
-      debugger;
+
       if ($width != null && $height != null && $length != null && $material != undefined) {
         $.post('api/add_item.php', {
           idProduct: `<?= $product->getId(); ?>`,
@@ -576,8 +557,7 @@ $tabs = $tabProductDao->findByProduct($product);
           material: $material,
           quantity: $quantity,
           printing: $printing,
-          /* lam: $laminada, */
-          /* window: $ventanilla */
+
         }, (data, status) => {
           if (status == 'success') {
             renderCart()
