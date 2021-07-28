@@ -110,6 +110,13 @@ $quotation = $quotationDao->findById($_GET["id"]);
               </div>
             </div>
             <div class="card" id="products">
+              <?php foreach ($quotation->getItems() as $item) {
+                if ($item->getPrice() == 1) { ?>
+                  <div class="alert alert-danger" role="alert">
+                    Revisar con el cliente!!! Los rangos de cantidades están fuera de los límites de producción.
+                  </div>
+              <?php }
+              } ?>
               <?php foreach ($quotation->getItems() as $item) { ?>
                 <div class="row align-items-center">
                   <div class="col-md-2 text-center"><img src="<?= $item->getProduct()->getImages()[0]->getUrl() ?>" alt="" width="150" height="150"></div>

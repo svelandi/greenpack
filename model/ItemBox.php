@@ -44,6 +44,8 @@ class ItemBox extends Item implements JsonSerializable
       $this->setPrice($directCost * $e2);
     elseif ($quantity >= $e1min &&  $quantity <= $e1max)
       $this->setPrice($directCost * $e1);
+    else
+      $this->setPrice(1);
   }
 
   public function calculateDirectCost()
@@ -59,7 +61,6 @@ class ItemBox extends Item implements JsonSerializable
 
     $directCost = $cost_paper;
     return $directCost;
-
   }
 
   public function setTypeProduct($typeProduct)
