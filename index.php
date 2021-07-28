@@ -278,7 +278,7 @@ $conversor = new ConversorDate(); ?>
 
   <script src="https://technext.github.io/shop/js/main.js"></script>
   <script src="https://technext.github.io/shop/js/jquery.countTo.js"></script>
-  <!-- <script src="https://technext.github.io/shop/js/jquery.flexslider-min.js"></script> -->
+  <script src="https://technext.github.io/shop/js/jquery.flexslider-min.js"></script>
   <script>
     $(document).ready(function() {
       $.get('/services/notify-admins.php', (data, status) => {
