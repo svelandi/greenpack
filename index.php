@@ -29,6 +29,7 @@ $conversor = new ConversorDate(); ?>
   <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/basket.css">
   <link rel="stylesheet" href="/css/translate.css">
+  <link rel="stylesheet" href="/css/notices_index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script type="text/javascript">
@@ -79,8 +80,9 @@ $conversor = new ConversorDate(); ?>
         height: 600px !important;
       }
     }
+
     @media(max-width: 400px) {
-      .row{
+      .row {
         margin-right: 0;
       }
     }
@@ -188,55 +190,46 @@ $conversor = new ConversorDate(); ?>
       $noticeDao = new NoticeDao();
       $notices = $noticeDao->findlastest(3);
       foreach ($notices as $notice) { ?>
-      <div class="col-sm-4 g-margin-b-30--xs g-margin-b-0--md">
-        <!-- Bloque 1 -->
-        <article>
-          <img class="img-responsive lazyload"   src="<?php echo $notice->getImage();  ?>">
-          <div class="g-bg-color--white g-box-shadow__dark-lightest-v2 g-text-center--xs g-padding-x-40--xs g-padding-y-40--xs" style="padding-top: 0.5rem;">
+        <div class="col-sm-4 g-margin-b-30--xs g-margin-b-0--md">
+          <!-- Bloque 1 -->
+          <article>
+            <img class="img-responsive lazyload" src="<?php echo $notice->getImage();  ?>">
+            <div class="g-bg-color--white g-box-shadow__dark-lightest-v2 g-text-center--xs g-padding-x-40--xs g-padding-y-40--xs" style="padding-top: 0.5rem;">
 
-            <div class="row g-font-size-14--xs g-font-weight--700 g-color--primary">
-              <div class="col text-uppercase"><i class="fas fa-eye"></i> Visitas: 0</div>
-              <div class="col"><?php echo $notice->getCreatedAt()["day"];
+              <div class="row g-font-size-14--xs g-font-weight--700 g-color--primary">
+                <div class="col text-uppercase"><i class="fas fa-eye"></i> Visitas: 0</div>
+                <div class="col"><?php echo $notice->getCreatedAt()["day"];
                                   echo " de " .  " " . $conversor->monthToString($notice->getCreatedAt()["month"]) . ", " . $notice->getCreatedAt()["year"];; ?></div>
-            </div>
+              </div>
 
-            <hr>
-            <h3 class="g-font-size-22--xs g-letter-spacing--1" style="    font-family: 'Poppins', sans-serif;
-                                          color: #222222;
-                                          line-height: 1.2em !important;
-                                          margin-bottom: 0;
-                                          margin-top: 0;
-                                          font-weight: 600;"><a href="/blog/blog-post.php?id=<?php echo $notice->getId(); ?>"><?php echo $notice->getTitle(); ?></a></h3>
-            <p></p>
-          </div>
-        </article>
-        <!-- Final Bloque 1 -->
-      </div>
+              <hr>
+              <h3 class="g-font-size-22--xs g-letter-spacing--1 notices">
+                <a href="/blog/blog-post.php?id=<?php echo $notice->getId(); ?>"><?php echo $notice->getTitle(); ?></a>
+              </h3>
+              <p></p>
+            </div>
+          </article>
+          <!-- Final Bloque 1 -->
+        </div>
       <?php } ?>
     </div>
   </div>
   <!-- end blog  -->
-  <hr style="
-    border-top: 3px solid rgba(0, 0, 0, 0.1);
-    width: 80%;
-">
+  <hr style="border-top: 3px solid rgba(0, 0, 0, 0.1);width: 80%;">
+
   <!-- clientes -->
   <section>
     <br><br>
-    <h2 class="g-font-size-32--xs g-font-size-36--md text-center">Nuestros Clientes</h2>
-    <br><br>
+    <h2 class="g-font-size-32--xs g-font-size-36--md text-center mb-3">Nuestros Clientes</h2>
     <div class="flexslider carousel">
-      <ul class="slides" id="clients-slides">
-      </ul>
+      <ul class="slides" id="clients-slides"></ul>
     </div>
   </section>
   <!-- clientes -->
-  <hr style="
-    border-top: 3px solid rgba(0, 0, 0, 0.1);
-    width: 80%;
-">
+
+  <hr style="border-top: 3px solid rgba(0, 0, 0, 0.1);width: 80%;">
   <!-- start contact Area -->
-  <section class="contact-area section-gap" id="contact">
+  <section class=" contact-area section-gap" id="contact">
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="menu-content pb-60 col-lg-8">
@@ -250,9 +243,7 @@ $conversor = new ConversorDate(); ?>
         <div class="row">
           <div class="col-lg-6 form-group">
             <input name="name" placeholder="Nombres" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombres y Apellidos'" class="common-input mb-20 form-control" required="" type="text">
-
             <input name="email" placeholder="Email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" class="common-input mb-20 form-control" required="" type="email">
-
             <input name="subject" placeholder="De que quieres hablar" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Asunto'" class="common-input mb-20 form-control" required="" type="text">
             <input type="checkbox" name="terms" id="terms" required><label for="terms" style="display:inline"> Conozco y acepto la política de protección de datos y autorizo su manejo.</span>
           </div>
@@ -287,7 +278,7 @@ $conversor = new ConversorDate(); ?>
 
   <script src="https://technext.github.io/shop/js/main.js"></script>
   <script src="https://technext.github.io/shop/js/jquery.countTo.js"></script>
-  <script src="https://technext.github.io/shop/js/jquery.flexslider-min.js"></script>
+  <!-- <script src="https://technext.github.io/shop/js/jquery.flexslider-min.js"></script> -->
   <script>
     $(document).ready(function() {
       $.get('/services/notify-admins.php', (data, status) => {
@@ -350,7 +341,10 @@ $conversor = new ConversorDate(); ?>
     $.get('/admin/texts/home/api/get_clients.php', (data, status) => {
       let clients = data
       clients.forEach(client => {
-        $('#clients-slides').append(`<li><img src="${client.image_url}" alt="Imagen de cliente" width="200" class="lazyload"></li>`)
+        $('#clients-slides').append(
+          `<li>
+            <img src="${client.image_url}" alt="Imagen de cliente" width="200" class="lazyload">
+           </li>`)
       });
     })
     $.get('/admin/texts/home/api/get_banner.php', (slides, status) => {

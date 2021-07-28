@@ -13364,7 +13364,7 @@ fieldset[disabled] .form-group .form-control {
   padding-top: 25px !important;
 }
 
-.alert {
+/* .alert {
   border: 0;
   border-radius: 3px;
   position: relative;
@@ -13568,7 +13568,7 @@ fieldset[disabled] .form-group .form-control {
 
 .alert [data-notify="dismiss"] {
   margin-right: 5px;
-}
+} */
 
 .places-buttons .btn {
   margin-bottom: 30px;

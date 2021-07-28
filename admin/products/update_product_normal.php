@@ -421,17 +421,17 @@ switch ($product->getCotizador()) {
               if (isset($cantidad)) {
               ?>
                 <div class="cantidades" id="cantidad">
-                  <label for=" e1_min" style="margin-right: 50px; text-align: center;" class="col-md-1">Mínimo</label>
-                  <input id="e1_min" name=" e1_min" class="form-control md-1" value="<?= $product->getCantidad()->getE1min() ?>" type="number" style="width: 100px; text-align:center"></input>
-                  <label for="e2_min " style="margin-right: 50px; text-align: center;" class="col-md-1">Mínimo</label>
-                  <input id="e2_min" name="e2_min" class="form-control md-1" value="<?= $product->getCantidad()->getE2min() ?>" type="number" style="width: 100px; text-align:center"></input>
-                  <label for="e3_min" style="margin-right: 50px; text-align: center;" class="col-md-1">Mínimo</label>
+                  <label for=" e1_min" class="col-md-1 alg-mar">Mínimo</label>
+                  <input id="e1_min" name=" e1_min" class="form-control md-1 e1_min" value="<?= $product->getCantidad()->getE1min() ?>" type="number" style="width: 100px; text-align:center"></input>
+                  <label for="e2_min " class="col-md-1 alg-mar">Mínimo</label>
+                  <input id="e2_min" name="e2_min" class="form-control md-1 e2_min" value="<?= $product->getCantidad()->getE2min() ?>" type="number" style="width: 100px; text-align:center"></input>
+                  <label for="e3_min" class="col-md-1 alg-mar">Mínimo</label>
                   <input id="e3_min" name="e3_min" class="form-control md-1" value="<?= $product->getCantidad()->getE3min() ?>" type="number" style="width: 100px; text-align:center"></input>
-                  <label for="e1_max" style="margin-right: 50px; text-align: center;" class="col-md-1">Máximo</label>
+                  <label for="e1_max" class="col-md-1 alg-mar">Máximo</label>
                   <input id="e1_max" name="e1_max" class="form-control md-1" value="<?= $product->getCantidad()->getE1max() ?>" type="number" style="width: 100px; text-align:center"></input>
-                  <label for="e2_max" style="margin-right: 50px; text-align: center;" class="col-md-1">Máximo</label>
+                  <label for="e2_max" class="col-md-1 alg-mar">Máximo</label>
                   <input id="e2_max" name="e2_max" class="form-control md-1" value="<?= $product->getCantidad()->getE2max() ?>" type="number" style="width: 100px; text-align:center"></input>
-                  <label for="e3_max " style="margin-right: 50px; text-align: center;" class="col-md-1">Máximo</label>
+                  <label for="e3_max " class="col-md-1 alg-mar">Máximo</label>
                   <input id="e3_max" name="e3_max" class="form-control md-1" value="<?= $product->getCantidad()->getE3max() ?>" type="number" style="width: 100px; text-align:center"></input>
                 </div>
               <?php }
@@ -494,6 +494,7 @@ switch ($product->getCotizador()) {
   <script src="../js/productos_asociados.js"></script>
   <script src="../js/categorias_productos.js"></script>
   <script src="../js/tab.js"></script>
+  <script src="js/update_product.js"></script>
 
   <script>
     /* document.addEventListener('wheel', function(e) {
@@ -501,42 +502,7 @@ switch ($product->getCotizador()) {
 }, { passive: false });
 /*  */
 
-    jQuery.event.special.touchstart = {
-      setup: function(_, ns, handle) {
-        this.addEventListener('touchstart', handle, {
-          passive: !ns.includes('noPreventDefault')
-        });
-      }
-    };
-    jQuery.event.special.touchmove = {
-      setup: function(_, ns, handle) {
-        this.addEventListener('touchmove', handle, {
-          passive: !ns.includes('noPreventDefault')
-        });
-      }
-    };
-
-    jQuery.event.special.wheel = {
-      setup: function(_, ns, handle) {
-        this.addEventListener('wheel', handle, {
-          passive: !ns.includes('noPreventDefault')
-        });
-      }
-    };
-
-    if (parseInt($('#category').val()) == 6) {
-      $('.length').css('display', 'none')
-      $('.window').css('display', 'none')
-    }
-
-    $(() => {
-      $('.sidebar div.sidebar-wrapper ul.nav li:first').removeClass('active')
-      $('#product-item').addClass('active')
-      $('.imagen').height($('.imagen').parent().height())
-      $('.imagen').width($('.imagen').parent().width())
-      $('.imagen .info').height($('.imagen').parent().height())
-      $('.imagen div.info').width($('.imagen').parent().width())
-    })
+    
 
     function reloadPage() {
       $('#main-panel').html('')
@@ -694,10 +660,10 @@ switch ($product->getCotizador()) {
               measurements.push(measurement)
 
           }
+
           /* cantidades del producto */
 
           let cantidad = {}
-
           cantidad.e1min = $('#e1_min').val();
           cantidad.e1max = $('#e1_max').val();
           cantidad.e2min = $('#e2_min').val();

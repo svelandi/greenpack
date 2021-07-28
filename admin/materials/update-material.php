@@ -68,25 +68,24 @@ $material = $materialDao->findById($_GET["id"]);
             </div>
             <br>
             <div class="row">
-              <div class="col-sm-6">
+              <!-- <div class="col-sm-6">
                 <div class="form-group">
                   <label for="">Precio pliego 60*90</label>
-                  <input type="text" name="" id="p5400" class="form-control" placeholder="" aria-describedby="helpId" value="<?= $material->p5400?>">
+                  <input type="text" name="" id="p5400" class="form-control" placeholder="" aria-describedby="helpId" value="<?= $material->p5400 ?>">
                   <small id="helpId">Solo para materiales de bolsas laminadas</small>
                 </div>
-              </div>
+              </div> -->
               <div class="col-sm-6">
-                <div class="form-group">
+                <!--  <div class="form-group">
                   <label for="">Precio pliego 70*100:</label>
-                  <input type="text" name="" id="p7000" class="form-control" placeholder="" aria-describedby="helpId" value="<?= $material->p7000?>">
+                  <input type="text" name="" id="p7000" class="form-control" placeholder="" aria-describedby="helpId" value="<?= $material->p7000 ?>">
                   <small id="helpId">Solo para materiales de bolsas laminadas</small>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="form-group">
               <label for="description">Descripcion:</label>
-              <br>
-              <textarea id="description" class="form-control" rows="5" placeholder="Aqui puedes ingresar la descripcíon de la materia prima que estas adicionando"></textarea>
+              <textarea id="description" class="form-control" rows="1" placeholder="Aqui puedes ingresar la descripcíon de la materia prima que estas adicionando"></textarea>
             </div>
             <br>
             <div class="row" style="margin-bottom: 20px; margin-top: 20px;">
@@ -131,7 +130,6 @@ $material = $materialDao->findById($_GET["id"]);
           if (status == 'success') {
             $.notify({
               message: 'Materia Prima actualizada',
-              title: '<strong>Greenpack</strong>',
               icon: 'fas fa-exclamation-triangle'
             }, {
               type: 'success'
