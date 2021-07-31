@@ -16,7 +16,7 @@ if (isset($_POST["id"]) && isset($_POST["description"]) && isset($_POST["image"]
                 return;
             }
 		}
-		http_response_code(303);
+		http_response_code(200);
 	} else {
 		http_response_code(500);
 	}

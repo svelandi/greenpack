@@ -2,6 +2,7 @@ $(".sidebar div.sidebar-wrapper ul.nav li:first").removeClass("active");
 $("#text-item").addClass("active");
 
 let $table;
+let id = "";
 const selectOptions = new Map();
 
 $(document).ready(function () {
@@ -116,9 +117,12 @@ const loadSubcategories = (idCategory) => {
                 <input type="text" class="form-control" placeholder="nombre" id="${
                   data.data[i]["id"]
                 }" value="${array}">
-                <button class="btn btn-danger deleteSubCategorie" id="${
+                <button class="btn btn-danger deleteSubCategorie" title="Eliminar Subcategoria" id="${
                   data.data[i]["id"]
                 }" onclick="deleteCategory(this.id);"><i class="fas fa-trash"></i></button>
+                <button class="btn btn-info cambiarImagenSubCategorie" title="Cambiar Imagen" id="${
+                  data.data[i]["id"]
+                }" onclick="changeImageSubCategories(${data.data[i]["id"]});"><i class="far fa-images"></i></button>
             </div>`
           );
         }
@@ -127,6 +131,10 @@ const loadSubcategories = (idCategory) => {
   );
 };
 
+function changeImageSubCategories(id) {
+  categoryId = id;
+  changeImage();
+}
 
 $("#buttonSubmitUpdate").click(() => {
   if (flagImage) {
@@ -366,12 +374,7 @@ function ajax(link, idCategory) {
 
   $.post(
     "api/update_category.php",
-    {
-      id: idCategory,
-      description: $("#descriptionCategoryInput").val(),
-      image: link,
-      subcategories: subcatValues,
-    },
+    {id: idCategory, description: $("#descriptionCategoryInput").val(), image: link, subcategories: subcatValues},
     (data, status) => {
       if (status == "success") {
         $("#modalEdit").modal("hide");

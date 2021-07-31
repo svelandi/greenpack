@@ -48,7 +48,8 @@ include("../partials/verify-session.php");
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-              Secciones</div>
+              Secciones
+            </div>
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-4 align-items-start justify-content-center text-center border-right" id="border-item">
@@ -69,20 +70,12 @@ include("../partials/verify-session.php");
                 </div>
                 <div class="col-sm-4 align-items-start justify-content-center  border-rigth text-center" id="border-item-2">
                   <a href="categories">
-                  <i class="fas fa-network-wired"></i>
+                    <i class="fas fa-network-wired"></i>
                     <br>
                     <br>
                     Categorías
                   </a>
                 </div>
-                <!-- <div class="col-sm-3 align-items-start justify-content-center  border-rigth text-center" id="border-item-2">
-                  <a href="shop">
-                  <i class="fas fa-shopping-bag"></i>
-                    <br>
-                    <br>
-                    Banner Tienda
-                  </a>
-                </div> -->
               </div>
             </div>
           </div>
@@ -96,19 +89,12 @@ include("../partials/verify-session.php");
     <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
     <script src="https://unpkg.com/default-passive-events"></script>
     <!-- <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script> -->
-    <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <!-- Chartist JS -->
     <script src="../assets/js/plugins/chartist.min.js"></script>
-    <!--  Notifications Plugin    -->
     <script src="../assets/js/plugins/bootstrap-notify.js"></script>
-    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="../assets/js/material-dashboard.js?v=2.1.0"></script>
-    <!-- Material Dashboard DEMO methods, don't include it in your project! -->
     <script src="../assets/demo/demo.js"></script>
     <script src="../assets/js/script.js"></script>
-
-    <!-- Page level plugin JavaScript-->
     <script src="/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="/vendor/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="/vendor/jquery.formatCurrency-1.4.0.min.js"></script>
