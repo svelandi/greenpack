@@ -122,6 +122,7 @@ class ProductDao
     }
     return $products;
   }
+
   function findByCategoryWithLimit($idCategory, $initialLimit, $quantity = 6)
   {
     $products = [];
@@ -147,6 +148,34 @@ class ProductDao
     }
     return $products;
   }
+
+  function findByCategoryWith($initialLimit, $quantity = 6)
+  {
+    $products = [];
+    $query = "SELECT id_products, ref, products.name, products.description, price, products.categories_id_categories as id_categories  FROM `products` LIMIT $initialLimit, $quantity";
+    $productsDB = $this->db->consult($query, "yes");
+
+    foreach ($productsDB as $productDB) {
+      $product = new Product();
+      $product->setId($productDB["id_products"]);
+      $product->setName($productDB["name"]);
+      $product->setRef($productDB["ref"]);
+      $product->setDescription($productDB["description"]);
+      $product->setPrice($productDB["price"]);
+      $product->setImages($this->imageDao->findByProduct($product));
+      $product->setMeasurements($this->measurementDao->findByProduct($product));
+      $product->setMaterials($this->materialDao->findByProduct($product));
+      if (isset($productDB["uses"])) {
+        $product->setUses(json_decode($productDB["uses"]));
+      }
+      $category = $this->categoryDao->findById($productDB["id_categories"]);
+      $product->setCategory($category);
+      array_push($products, $product);
+    }
+    return $products;
+  }
+
+
   function findRelatedProducts($product, $limit)
   {
     $this->db->connect();
