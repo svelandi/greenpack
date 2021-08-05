@@ -63,7 +63,7 @@ class ProductAssocDao
     $query = "SELECT * FROM `products_assoc` WHERE `product` = '" . $productsAssoc->getIdproduct() . "' ";
     $idProductAssoc = $this->db->consult($query, "yes");
 
-    if ($idProductAssoc) {
+    if (sizeof($idProductAssoc) == 0) {
 
       foreach ($idProductAssoc as $key => $val) {
         if ($val['product_assoc'] === $productsAssoc->getProductAssoc()) {
