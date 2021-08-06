@@ -2,7 +2,8 @@
     <p class="description-product">
         <span class="text-primary">Impresion: </span><span>&nbsp;<?= $item->isPrinting() ? "SI" : "NO"; ?></span>
         <br>
-        <span class="text-primary"><?= $item->getProduct()->getId() == $_ENV["id_sacos"]  || $item->getProduct()->getCategory()->getId() != 1 ? "Tipo de producto:" : "Material:" ?></span><span>&nbsp;<?= $item->getProduct()->getId()  == $_ENV["id_sacos"] || $item->getProduct()->getCategory()->getId() != 1 ? $item->getTypeProduct() : $item->getMaterial()->getName() ?></span>
+        <span class="text-primary"><?= $item->getProduct()->getCotizador() != 1 ? "Tipo de producto:" : "Material:" ?></span><span>&nbsp;<?= $item->getProduct()->getCotizador() != 1 ? $item->getTypeProduct() : $item->getMaterial()->getName() ?></span>
+        
         <br>
         <span class="text-primary">Medidas:</span>
         <br>

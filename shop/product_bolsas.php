@@ -210,7 +210,8 @@ $tabs = $tabProductDao->findByProduct($product);
                   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion-cotizador">
                     <div class="card-body">
                       <?php foreach ($product->getMaterials() as $material) { ?>
-                        <label class="radio-inline" style="margin-left: 10px;">&nbsp;&nbsp;<input type="radio" name="material" value="<?= $material->getId(); ?>">&nbsp;&nbsp;&nbsp;<a href="javascript:;" title="Descripción" data-toggle="popover" data-trigger="hover" data-content="<?= $material->getDescription() ?>" data-placement="bottom"><?= $material->getName(); ?></a></label>
+                        <label for="mat<?= $material->getId(); ?>" class="radio-inline" style="margin-left: 10px;">&nbsp;&nbsp;
+                        <input type="radio" id="mat<?= $material->getId(); ?>" name="material" value="<?= $material->getId(); ?>">&nbsp;&nbsp;&nbsp;<a href="javascript:;" title="Descripción" data-toggle="popover" data-trigger="hover" data-content="<?= $material->getDescription() ?>" data-placement="bottom"><?= $material->getName(); ?></a></label>
                       <?php
                       } ?>
                     </div>
