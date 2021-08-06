@@ -3,7 +3,6 @@
         <span class="text-primary">Impresion: </span><span>&nbsp;<?= $item->isPrinting() ? "SI" : "NO"; ?></span>
         <br>
         <span class="text-primary"><?= $item->getProduct()->getCotizador() != 1 ? "Tipo de producto:" : "Material:" ?></span><span>&nbsp;<?= $item->getProduct()->getCotizador() != 1 ? $item->getTypeProduct() : $item->getMaterial()->getName() ?></span>
-        
         <br>
         <span class="text-primary">Medidas:</span>
         <br>

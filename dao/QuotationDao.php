@@ -157,17 +157,18 @@ class QuotationDao
     $itemsDB = $this->db->consult("SELECT * FROM quotations_details WHERE `quotations_id_quotations` = $id", "yes");
     foreach ($itemsDB as $itemDB) {
       $product = $this->productDao->findById($itemDB["products_id_products"]);
+      
       if ($product->getCategory()->getName() == 'bolsas') {
-        if ($product->getId() == $_ENV["id_sacos"]) {
+        /* if ($product->getId() == $_ENV["id_sacos"]) {
           $item = new ItemSaco();
           $item->setObservations($itemDB["observations"]);
           $item->setTypeProduct($itemDB["type_product"]);
         } else if ($product->getId() == $_ENV["id_fondo_auto"]) {
           $item = new ItemFondoAutomatico();
-        } else {
+        } else { */
           $item = new ItemBag();
-        }
-      } else if ($product->getCategory()->getId() == 6) {
+        /* } */
+      } /* else if ($product->getCategory()->getId() == 6) {
         if ($product->getId() == $_ENV["id_individuales"]) {
           $item = new ItemIndividual();
         } else {
@@ -179,7 +180,7 @@ class QuotationDao
         $item = new ItemBolsasLaminadas();
         $item->setObservations($itemDB["observations"]);
         $item->setTypeProduct($itemDB["type_product"]);
-      } else {
+      }  */else {
         $item = new ItemBox();
         $item->setObservations($itemDB["observations"]);
         $item->setNumberInks((int) $itemDB["number_inks"]);
