@@ -2,10 +2,14 @@
 require_once dirname(dirname(__DIR__)) . "/dao/QuotationDao.php";
 include("../partials/verify-session.php");
 $quotationDao = new QuotationDao();
+$adminDao = new AdminDao();
 if (!isset($_GET["id"])) {
   header("Location: /admin/materials");
 }
 $quotation = $quotationDao->findById($_GET["id"]);
+if (isset($_GET["id"])) {
+  $admin = $adminDao->findById($quotation->getIdAdminAssigned());
+}
 ?>
 <!-- author: Teenus SAS, github: Teenus SAS -->
 <!doctype html>
@@ -207,6 +211,8 @@ $quotation = $quotationDao->findById($_GET["id"]);
             </div>
           </div>
         </div>
+        <label id="vendedor" hidden><?= $admin->getName() ?> <?= $admin->getLastName() ?></label>
+        <label id="email" hidden><?= $admin->getEmail() ?></label>
         <div id="load_pdf">
         </div>
         <?php include("../partials/footer.html"); ?>

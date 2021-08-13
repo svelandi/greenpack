@@ -39,13 +39,12 @@ if (isset($_POST["id"]) && isset($_POST["content"])) {
   $mail->Host = $_ENV["smtpHost"];
   $mail->Username = $_ENV["smtpEmail"];
   $mail->Password = $_ENV["smtpPass"];
-
   $mail->From = $_ENV["smtpEmail"]; // Email desde donde envio el correo.
   $mail->FromName = 'greenpack';
   $mail->AddAddress($email);
   $mail->addStringAttachment($pdf, "cotizacion.pdf");
   $mail->Subject = "Envio de Cotización"; // Este es el titulo del email.
-  $mail->Body = $_POST["content"];
+  $mail->Body = $_POST["content"] . $file;
   $mail->SMTPSecure = 'tls';
   $mail->SMTPOptions = array(
     'ssl' => array(

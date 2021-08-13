@@ -7,11 +7,11 @@ function verifyDirectCost(id) {
   $.get("api/calculate_cost_item.php", { id }, (data, status) => {
     let cost = parseInt(data);
     if (parseInt($(`#price${id}`).val()) < cost) {
-      //console.log($(`#priceHelp${id}`));
       $(`#priceHelp${id}`)
         .html(`<div class="alert alert-danger fade show mb-0">Estas por debajo del costo del producto, el cual equivale a $${cost} <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                   <span aria-hidden="true">&times;</span>
-                                   </button></div>`);
+                  <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>`);
       $(`#priceHelp${id}`).fadeIn();
     } else {
       $(`#priceHelp${id}`).fadeOut();
@@ -106,7 +106,21 @@ var editor = new FroalaEditor(
   },
   () => {
     editor.html.set(
-      `<html><body><p>Nos permitimos enviarle su cotización</p><p>cotización generada</p></body></html>`
+      `<html>
+        <body>
+          <div style="text-align:center">
+            <img src="/images/greenpack_logo_verde.png" alt="Greenpack" style="width:30%">
+          </div>   
+          <p>Señor(a) ${$("#nameClient").val()}</p>
+          <p>De acuerdo con su solicitud, adjuntamos la cotización, la cual podrá leer haciendo clic en el enlace
+          </p>
+          <p>Cualquier inquietud que tenga estamos para servirle</p>
+          <p>Cordialmente,</p>
+          <b>${$("#vendedor").html()}</b><br>
+          <b>${$("#email").html()}</b>
+          <p><b>Greenpack S.A.S</b></p>
+        </body>
+       </html>`
     );
     if (document.domain != "localhost") {
       $(".fr-wrapper>div:first-child").css("visibility", "hidden");
