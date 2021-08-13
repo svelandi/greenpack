@@ -474,10 +474,10 @@ if (isset($_GET["id"])) {
 
       text-align: center;
       vertical-align: middle;
-      /* border-top: .5pt solid black;
+      border-top: .5pt solid black;
       border-right: none;
       border-bottom: .5pt solid black;
-      border-left: .5pt solid black; */
+      border-left: .5pt solid black;
 
       white-space: nowrap;
     }
