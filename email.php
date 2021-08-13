@@ -8,7 +8,7 @@ $email = $ENV["email_contact"];
   // envio de email
   $mail = new PHPMailer(true);
   
-    $mail->isSMTP();
+    //$mail->isSMTP();
     $mail->SMTPAuth = true;
     $mail->Port = $_ENV["smtpPort"];
     $mail->IsHTML(true);

@@ -14,7 +14,7 @@ if (isset($_POST["email"])) {
 
     // envio de email
     $mail = new PHPMailer();
-    $mail->isSMTP();
+    //$mail->isSMTP();
     $mail->SMTPAuth = true;
     $mail->Port = $_ENV["smtpPort"];
     $mail->IsHTML(true);

@@ -29,7 +29,7 @@ if (isset($_POST["id"]) && isset($_POST["content"])) {
   $email = $quotation->getEmail();
   // envio de email
   $mail = new PHPMailer();
-  $mail->isSMTP();
+  //$mail->isSMTP();
   $mail->SMTPAuth = true;
   $mail->Port = $_ENV["smtpPort"];
   $mail->IsHTML(true);

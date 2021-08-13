@@ -33,40 +33,8 @@ if (
   $product = $productDao->findById($_POST["idProduct"]);
 
   if ($product->getCategory()->getName() == 'bolsas' && $product->getCotizador() == '1') {
-    /* if ($product->getId() == $_ENV["id_sacos"]) {
-      $item = new ItemSaco();
-      $item->setLam(false);
-      $item->setPla(false);
-      $item->setObservations($_POST["observations"]);
-      $item->setTypeProduct($_POST["material"]);
-      $item->setMaterial($product->getMaterials()[0]);
-    } else if ($product->getId() == $_ENV["id_fondo_auto"]) {
-      $item = new ItemFondoAutomatico();
-      $item->setMaterial($materialDao->findByIdByProduct($_POST["material"], $product));
-    } else { */
-      $item = new ItemBag();
-      $item->setMaterial($materialDao->findById($_POST["material"]));
-    /* } */
-    /* $item->setLam(filter_var($_POST["lam"], FILTER_VALIDATE_BOOLEAN));
-    $item->setPla(filter_var($_POST["window"], FILTER_VALIDATE_BOOLEAN)); */
- /*  } else if ($product->getCategory()->getId() == 6) {
-    if ($product->getId() == $_ENV["id_individuales"]) {
-      $item = new ItemIndividual();
-    } else {
-      $item = new ItemSheet();
-    }
-    $item->setLam(false);
-    $item->setPla(false);
-    $item->setMaterial($product->getMaterials()[0]);
-    $item->setObservations($_POST["observations"]);
-    $item->setTypeProduct($_POST["material"]);
-  } else if ($product->getCategory()->getId() == 8) {
-    $item = new ItemBolsasLaminadas();
-    $item->setObservations($itemDB["observations"]);
-    $item->setTypeProduct($itemDB["type_product"]);
-    $item->setLam(false);
-    $item->setPla(false);
-    $item->setMaterial($materialDao->findByIdByProduct($product->getMaterials()[0]->getId(), $product)); */
+    $item = new ItemBag();
+    $item->setMaterial($materialDao->findById($_POST["material"]));
   } else {
     $item = new ItemBox();
     $item->setLam(false);

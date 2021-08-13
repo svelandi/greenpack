@@ -9,7 +9,7 @@ if ($_GET["email"]) {
   $name = $_GET["name"];
   // envio de email
   $mail = new PHPMailer();
-  $mail->isSMTP();
+  //$mail->isSMTP();
   $mail->SMTPAuth = true;
   $mail->Port = $_ENV["smtpPort"];
   $mail->IsHTML(true);
@@ -19,7 +19,7 @@ if ($_GET["email"]) {
   $mail->Username = $_ENV["smtpEmail"];
   $mail->Password = $_ENV["smtpPass"];
 
-  $mail->From = $_ENV["smtpEmail"]; // Email desde donde env�o el correo.
+  $mail->From = $_ENV["smtpEmail"]; // Email desde donde envio el correo.
   $mail->FromName = 'Greenpack';
   $mail->AddAddress($email);
   $mail->Subject = "Nueva Cotización"; // Este es el titulo del email.
@@ -33,8 +33,8 @@ if ($_GET["email"]) {
   <body>
     <img src='https://$host/images/greenpack_logo_verde.png'>
     <p>Muy Buenos $greeting</p>
-    <p>$name, Que gusto saludarle y esperamos que todo le este saliendo de maravilla. Muchas gracias por su interés en nuestros productos. Acabamos de recibir tu solicitud de cotización, en breve una de nuestras vendedoras te contactara.</p>
-    <p>Te enviamos un cordial saludo</p>
+    <p>$name, Que gusto saludarle y esperamos que todo le este saliendo de maravilla. Muchas gracias por su interés en nuestros productos. Acabamos de recibir su solicitud de cotización, en breve una de nuestras vendedoras le contactara.</p>
+    <p>Le enviamos un cordial saludo</p>
     <p>Coordialmente,</p>
     <p><strong>Equipo Greenpack</strong></p>
   <p style='color: #61bd4f'>Comprometidos para que nuestro medio ambiente siga siendo verde</p>

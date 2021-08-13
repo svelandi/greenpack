@@ -8,7 +8,7 @@ if ($_GET["email"]) {
   $email = $_GET["email"];
   // envio de email
   $mail = new PHPMailer();
-  $mail->isSMTP();
+  //$mail->isSMTP();
   $mail->SMTPAuth = true;
   $mail->Port = $_ENV["smtpPort"];
   $mail->IsHTML(true);
@@ -31,7 +31,7 @@ if ($_GET["email"]) {
   <body>
   <img src='https://$host/images/greenpack_logo_verde.png'>
     <p>Muy Buenos $greeting</p>
-    <p>Es un gusto saludarte y decirte que se te ha sido asignado una nueva cotización para tu gestión.
+    <p>Se te ha sido asignado una nueva cotización para tu gestión.
     Por el compromiso de atencion rápida para nuestros clientes, recuerda que tienes 3 horas para darle respuesta o sera asiganda a otro vendedor</p>
 
     <p><a href='https://" . $_SERVER["HTTP_HOST"] . "/admin'>Gestiona tu Cotización</a></p>
