@@ -474,10 +474,10 @@ if (isset($_GET["id"])) {
 
       text-align: center;
       vertical-align: middle;
-      border-top: .5pt solid black;
+      /* border-top: .5pt solid black;
       border-right: none;
       border-bottom: .5pt solid black;
-      border-left: .5pt solid black;
+      border-left: .5pt solid black; */
 
       white-space: nowrap;
     }
@@ -784,11 +784,11 @@ if (isset($_GET["id"])) {
         Mosquera - Cundinamarca - Colombia<br>
       </div>
       <div class="idCotizacion">
-        Cotización No <br><?= $quotation->getId() ?>
+        Cotización No. <br><?= $quotation->getId() ?>
       </div>
     </div>
 
-    <div class="barra"></div>
+    <div class="b"></div>
 
     <div class="cliente">
       <label class="fs">Nombres y Apellidos</label>
@@ -808,7 +808,7 @@ if (isset($_GET["id"])) {
       <label class="fs">Celular</label>
       <label><?= $quotation->getCellphoneNumber() ?></label>
     </div>
-    <div class="barra"></div>
+    <div class="b"></div>
 
     <table class="table mt-3">
       <thead>
@@ -828,21 +828,21 @@ if (isset($_GET["id"])) {
               <img src="<?= $item->getProduct()->getImages()[0]->getUrl() ?>" width="150" height="150" style="margin: 2px;">
               </th>
             <td class="vert">
-              <label class="font510772">Referencia</label>
-              <label class="font010772"> <?= $item->getProduct()->getRef() ?> </label>
+              <label class="font510772">Referencia: </label>
+              <label class="font010772"> <?= $item->getProduct()->getname() ?> </label>
               <br>
               <?php if ($item->getProduct()->getCategory()->getId() != 1 || $item->getProduct()->getId() == $_ENV["id_sacos"]) { ?>
-                <label class="font510772">Tipo De Producto</label>
+                <label class="font510772">Tipo De Producto: </label>
                 <label class="font010772"> <?= $item->getTypeProduct() ?></label>
                 <br>
               <?php } ?>
-              <label class="font510772">Material</label>
+              <label class="font510772">Material: </label>
               <label class="font010772"> <?= $item->getMaterial()->getName() ?></label>
               <br>
-              <label class="font510772">Medidas</label>
+              <label class="font510772">Medidas: </label>
               <label class="font010772"> <?= $item->getMeasurement()->getWidth() ?>*<?= $item->getMeasurement()->getHeight() ?>*<?= $item->getMeasurement()->getLength() ?></label>
               <br>
-              <label class="font510772">Impresión</label>
+              <label class="font510772">Impresión: </label>
               <label class="font010772"> <?= $item->isPrinting() ? "SI" : "NO" ?></label>
               <br>
               <?php if ($item->getProduct()->getCategory()->getId() == 1 && $item->getProduct()->getId() != $_ENV["id_sacos"]) { ?>
@@ -875,11 +875,12 @@ if (isset($_GET["id"])) {
         <?php } ?>
       </tbody>
     </table>
-
+    <div style="text-align: left;">
+      <label><b>Observaciones</b></label>
+    </div>
     <div class="obstotal">
       <div class="obser">
-        <label><b>Observaciones</b></label>
-        <textarea rows="4" type="text" class="form-control" name="" id="" disabled></textarea>
+        <textarea rows="4" type="text" class="form-control" name="" id=""></textarea>
       </div>
 
       <div class="total vert">
@@ -892,7 +893,7 @@ if (isset($_GET["id"])) {
       </div>
     </div>
 
-    <div class="barratitle mt-5">
+    <div class="btitle mt-5">
       <div class="condiciones">
         <label class="title"><b>Condiciones de Pago</b></label>
       </div>
@@ -901,7 +902,7 @@ if (isset($_GET["id"])) {
       <?= $quotation->getPaymentConditions() ?>
     </div>
 
-    <div class="barratitle mt-3">
+    <div class="btitle mt-3">
       <div class="condiciones">
         <label class="title"><b>Tiempo de Entrega a partir de la aprobación</b></label>
       </div>
@@ -910,7 +911,7 @@ if (isset($_GET["id"])) {
       <?= $quotation->getDeliveryTime() ?>
     </div>
 
-    <div class="barratitle mt-3">
+    <div class="btitle mt-3">
       <div class="condiciones">
         <label class="title"><b>Vigencia</b></label>
       </div>
@@ -919,263 +920,22 @@ if (isset($_GET["id"])) {
       <?= $quotation->getValidity() ?>
     </div>
 
-    <div class="barra"></div>
-    <div>Cordialmente,</div>
-    <div><?= $admin->getName() ?>
-      <?= $admin->getLastName() ?>
-      <?= $admin->getEmail() ?>
-      <?= $admin->getPhone() ?>
+    <div class="b"></div>
+
+    <div class="mb-3" style="text-align: left;margin-left:55px">
+      <div class="mb-5">Cordialmente,</div>
+      <div>
+        ___________________________________________ <br>
+        <b><?= $admin->getName() ?></b>
+        <b><?= $admin->getLastName() ?></b><br>
+        <b>Email: <?= $admin->getEmail() ?></b><br>
+        <b>Celular: <?= $admin->getPhone() ?></b>
+      </div>
     </div>
-    <div class="barra mb-50"></div>
 
-    
-    <table border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse:collapse;table-layout:fixed; width: 100%;margin: 0 auto;">
-      <tbody>
+    <div class="b mb-50"></div>
 
-        <!--  <tr height="12" style="mso-height-source:userset;height:9.0pt">
-          <td height="12" class="xl6510772" style="height:9.0pt"></td>
-          <td class="xl6510772"></td>
-          <td class="xl6510772"></td>
-          <td class="xl6510772"></td>
-          <td class="xl6510772"></td>
-          <td class="xl6510772"></td>
-          <td class="xl6510772"></td>
-          <td class="xl6510772"></td>
-          <td class="xl6510772"></td>
-          <td class="xl6510772"></td>
-          <td class="xl1510772"></td>
 
-        </tr>
-        <tr height="20" style="height:15.0pt">
-          <td height="20" class="xl1510772" colspan="2" style="height:15.0pt">Observaciones</td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td colspan="7" rowspan="3" height="63" class="xl9210772 break-word" style="border-right:.5pt solid black;border-bottom:.5pt solid black;height:47.25pt; vertical-align: top!important; overflow-wrap: break-word;white-space: pre-line;overflow: auto;text-overflow: ellipsis;">
-            <p>
-              <?php
-              $parts = ceil(strlen($quotation->getExtraInformation()) / 60);
-              $parts = $parts == 1 ? 2 : $parts;
-              for ($i = 0; $i < $parts - 1; $i++) {
-                echo substr($quotation->getExtraInformation(), $i * 60, ($i + 1) * 60);
-                echo '<br>';
-              }
-              ?>
-            </p>
-          </td>
-          <td class="xl6510772"></td>
-          <td class="xl1510772">Subtotal</td>
-          <td colspan="2" class="xl7310772"><span style="mso-spacerun:yes">&nbsp;</span>$<span style="mso-spacerun:yes">&nbsp;</span><?= number_format($quotation->calculateTotal(), 0, ",", ".") ?></td>
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl6510772" style="height:15.75pt"></td>
-          <td class="xl1510772">IVA 19%</td>
-          <td colspan="2" class="xl7310772" style="border-top:none">&nbsp; $ <?= number_format($quotation->calculateTotal() * 0.19, 0, ",", ".") ?></td>
-
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl6510772" style="height:15.75pt"></td>
-          <td class="xl1510772">Total</td>
-          <td colspan="2" class="xl7310772" style="border-top:none">&nbsp; $ <?= number_format($quotation->calculateTotal() + $quotation->calculateTotal() * 0.19, 0, ",", ".") ?></td>
-
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl1510772" style="height:15.75pt"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-
-        </tr> -->
-        <!-- <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td colspan="11" height="21" class="xl8310772" style="height:15.75pt">Condiciones de Pago</td>
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td colspan="11" height="21" class="xl6810772" style="height:15.75pt"><?= $quotation->getPaymentConditions() ?></td>
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl1510772" style="height:15.75pt"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td colspan="11" height="21" class="xl8310772" style="height:15.75pt">Tiempo de Entrega a partir de la aprobación</td>
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td colspan="11" height="21" class="xl6810772" style="height:15.75pt"><?= $quotation->getDeliveryTime() ?></td>
-        </tr> -->
-        <!-- <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td colspan="11" height="21" class="xl6810772" style="height:15.75pt">Impresos 15
-            dias</td>
-        </tr> -->
-        <!-- <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl1510772" style="height:15.75pt"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td colspan="11" height="21" class="xl8310772" style="height:15.75pt">Vigencia</td>
-
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td colspan="11" height="21" class="xl8910772" width="828" style="height:15.75pt;width:619pt">
-            <span style="mso-spacerun:yes">&nbsp;&nbsp;</span><?= $quotation->getValidity() ?>
-          </td>
-        </tr> -->
-        <!-- <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl1510772" style="height:15.75pt"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl1510772" style="height:15.75pt"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl1510772" style="height:15.75pt"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl1510772" colspan="2" style="height:15.75pt">Cordialmente,</td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl1510772" style="height:15.75pt"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl1510772" style="height:15.75pt"></td>
-          <td colspan="3" class="xl1510772" style="text-transform:capitalize;"><?= $admin->getName() ?> <?= $admin->getLastName() ?></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl1510772" style="height:15.75pt"></td>
-          <td colspan="2" class="xl1510772">Correo: <?= $admin->getEmail() ?></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl1510772" style="height:15.75pt"></td>
-          <td class="xl1510772">Telefono: <?= $admin->getPhone() ?></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-
-        </tr>
-        <tr height="21" style="mso-height-source:userset;height:15.75pt">
-          <td height="21" class="xl1510772" style="height:15.75pt"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-          <td class="xl1510772"></td>
-
-        </tr> -->
-      </tbody>
-    </table>
   </div>
   <script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
