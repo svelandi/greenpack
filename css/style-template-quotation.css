@@ -1,11 +1,11 @@
-{
+body {
   mso-displayed-decimal-separator: "\,";
   mso-displayed-thousand-separator: "\.";
 }
 
 .font010772 {
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -16,7 +16,7 @@
 
 .font510772 {
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
@@ -29,7 +29,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -48,7 +48,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -67,7 +67,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -78,8 +78,8 @@
   text-align: general;
   vertical-align: bottom;
   border: none;
-  background: #C5E0B3;
-  mso-pattern: #C5E0B3 none;
+  background: #c5e0b3;
+  mso-pattern: #c5e0b3 none;
   white-space: nowrap;
 }
 
@@ -87,7 +87,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
@@ -106,7 +106,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -125,7 +125,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -144,7 +144,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
@@ -154,12 +154,12 @@
   mso-number-format: General;
   text-align: center;
   vertical-align: middle;
-  border-top: .5pt solid black;
-  border-right: .5pt solid black;
+  border-top: 0.5pt solid black;
+  border-right: 0.5pt solid black;
   border-bottom: none;
-  border-left: .5pt solid black;
-  background: #C5E0B3;
-  mso-pattern: #C5E0B3 none;
+  border-left: 0.5pt solid black;
+  background: #c5e0b3;
+  mso-pattern: #c5e0b3 none;
   white-space: normal;
 }
 
@@ -167,7 +167,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
@@ -177,12 +177,12 @@
   mso-number-format: General;
   text-align: center;
   vertical-align: middle;
-  border-top: .5pt solid black;
-  border-right: .5pt solid black;
+  border-top: 0.5pt solid black;
+  border-right: 0.5pt solid black;
   border-bottom: none;
-  border-left: .5pt solid black;
-  background: #C5E0B3;
-  mso-pattern: #C5E0B3 none;
+  border-left: 0.5pt solid black;
+  background: #c5e0b3;
+  mso-pattern: #c5e0b3 none;
   white-space: nowrap;
 }
 
@@ -190,7 +190,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -200,7 +200,7 @@
   mso-number-format: General;
   text-align: center;
   vertical-align: middle;
-  border: .5pt solid black;
+  border: 0.5pt solid black;
   mso-background-source: auto;
   mso-pattern: auto;
   white-space: nowrap;
@@ -210,7 +210,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -220,7 +220,7 @@
   mso-number-format: "_-\0022$\0022\\ * \#\,\#\#0_-\;\\-\0022$\0022\\ * \#\,\#\#0_-\;_-\0022$\0022\\ * \0022-\0022_-\;_-\@";
   text-align: center;
   vertical-align: middle;
-  border: .5pt solid black;
+  border: 0.5pt solid black;
   mso-background-source: auto;
   mso-pattern: auto;
   white-space: nowrap;
@@ -230,7 +230,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -240,7 +240,7 @@
   mso-number-format: General;
   text-align: center;
   vertical-align: bottom;
-  border: .5pt solid black;
+  border: 0.5pt solid black;
   mso-background-source: auto;
   mso-pattern: auto;
   white-space: nowrap;
@@ -250,7 +250,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -260,7 +260,7 @@
   mso-number-format: General;
   text-align: general;
   vertical-align: bottom;
-  border: .5pt solid black;
+  border: 0.5pt solid black;
   mso-background-source: auto;
   mso-pattern: auto;
   white-space: nowrap;
@@ -270,7 +270,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -289,7 +289,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -299,10 +299,10 @@
   mso-number-format: General;
   text-align: left;
   vertical-align: bottom;
-  border-top: .5pt solid black;
+  border-top: 0.5pt solid black;
   border-right: none;
-  border-bottom: .5pt solid black;
-  border-left: .5pt solid black;
+  border-bottom: 0.5pt solid black;
+  border-left: 0.5pt solid black;
   background: white;
   mso-pattern: white none;
   white-space: normal;
@@ -312,7 +312,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: windowtext;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -322,9 +322,9 @@
   mso-number-format: General;
   text-align: general;
   vertical-align: bottom;
-  border-top: .5pt solid black;
+  border-top: 0.5pt solid black;
   border-right: none;
-  border-bottom: .5pt solid black;
+  border-bottom: 0.5pt solid black;
   border-left: none;
   mso-background-source: auto;
   mso-pattern: auto;
@@ -335,7 +335,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: windowtext;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -345,9 +345,9 @@
   mso-number-format: General;
   text-align: general;
   vertical-align: bottom;
-  border-top: .5pt solid black;
+  border-top: 0.5pt solid black;
   border-right: none;
-  border-bottom: .5pt solid black;
+  border-bottom: 0.5pt solid black;
   border-left: none;
   mso-background-source: auto;
   mso-pattern: auto;
@@ -358,7 +358,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 16.0pt;
+  font-size: 16pt;
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
@@ -377,7 +377,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 18.0pt;
+  font-size: 18pt;
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
@@ -395,8 +395,8 @@
 .xl8210772 {
   padding: 0px;
   mso-ignore: padding;
-  color: #0563C1;
-  font-size: 11.0pt;
+  color: #0563c1;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: underline;
@@ -416,7 +416,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
@@ -427,8 +427,8 @@
   text-align: general;
   vertical-align: bottom;
   border: none;
-  background: #C5E0B3;
-  mso-pattern: #C5E0B3 none;
+  background: #c5e0b3;
+  mso-pattern: #c5e0b3 none;
   white-space: nowrap;
 }
 
@@ -436,7 +436,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: windowtext;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -456,7 +456,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: windowtext;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -476,7 +476,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -486,10 +486,10 @@
   mso-number-format: "_-* \#\,\#\#0_-\;\\-* \#\,\#\#0_-\;_-* \0022-\0022_-\;_-\@";
   text-align: center;
   vertical-align: middle;
-  border-top: .5pt solid black;
+  border-top: 0.5pt solid black;
   border-right: none;
-  border-bottom: .5pt solid black;
-  border-left: .5pt solid black;
+  border-bottom: 0.5pt solid black;
+  border-left: 0.5pt solid black;
   mso-background-source: auto;
   mso-pattern: auto;
   white-space: nowrap;
@@ -499,7 +499,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: windowtext;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -509,9 +509,9 @@
   mso-number-format: General;
   text-align: general;
   vertical-align: bottom;
-  border-top: .5pt solid black;
-  border-right: .5pt solid black;
-  border-bottom: .5pt solid black;
+  border-top: 0.5pt solid black;
+  border-right: 0.5pt solid black;
+  border-bottom: 0.5pt solid black;
   border-left: none;
   mso-background-source: auto;
   mso-pattern: auto;
@@ -522,7 +522,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -532,10 +532,10 @@
   mso-number-format: General;
   text-align: center;
   vertical-align: middle;
-  border-top: .5pt solid black;
+  border-top: 0.5pt solid black;
   border-right: none;
-  border-bottom: .5pt solid black;
-  border-left: .5pt solid black;
+  border-bottom: 0.5pt solid black;
+  border-left: 0.5pt solid black;
   background: white;
   mso-pattern: white none;
   white-space: normal;
@@ -545,7 +545,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -564,7 +564,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
@@ -574,12 +574,12 @@
   mso-number-format: General;
   text-align: center;
   vertical-align: middle;
-  border-top: .5pt solid black;
+  border-top: 0.5pt solid black;
   border-right: none;
-  border-bottom: .5pt solid black;
-  border-left: .5pt solid black;
-  background: #C5E0B3;
-  mso-pattern: #C5E0B3 none;
+  border-bottom: 0.5pt solid black;
+  border-left: 0.5pt solid black;
+  background: #c5e0b3;
+  mso-pattern: #c5e0b3 none;
   white-space: nowrap;
 }
 
@@ -587,7 +587,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
@@ -598,8 +598,8 @@
   text-align: center;
   vertical-align: bottom;
   border: none;
-  background: #D8D8D8;
-  mso-pattern: #D8D8D8 none;
+  background: #d8d8d8;
+  mso-pattern: #d8d8d8 none;
   white-space: nowrap;
 }
 
@@ -607,7 +607,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: black;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -617,10 +617,10 @@
   mso-number-format: General;
   text-align: center;
   vertical-align: bottom;
-  border-top: .5pt solid black;
+  border-top: 0.5pt solid black;
   border-right: none;
   border-bottom: none;
-  border-left: .5pt solid black;
+  border-left: 0.5pt solid black;
   mso-background-source: auto;
   mso-pattern: auto;
   white-space: nowrap;
@@ -630,7 +630,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: windowtext;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -640,7 +640,7 @@
   mso-number-format: General;
   text-align: general;
   vertical-align: bottom;
-  border-top: .5pt solid black;
+  border-top: 0.5pt solid black;
   border-right: none;
   border-bottom: none;
   border-left: none;
@@ -653,7 +653,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: windowtext;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -663,8 +663,8 @@
   mso-number-format: General;
   text-align: general;
   vertical-align: bottom;
-  border-top: .5pt solid black;
-  border-right: .5pt solid black;
+  border-top: 0.5pt solid black;
+  border-right: 0.5pt solid black;
   border-bottom: none;
   border-left: none;
   mso-background-source: auto;
@@ -676,7 +676,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: windowtext;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -689,7 +689,7 @@
   border-top: none;
   border-right: none;
   border-bottom: none;
-  border-left: .5pt solid black;
+  border-left: 0.5pt solid black;
   mso-background-source: auto;
   mso-pattern: auto;
   white-space: nowrap;
@@ -699,7 +699,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: windowtext;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -710,7 +710,7 @@
   text-align: general;
   vertical-align: bottom;
   border-top: none;
-  border-right: .5pt solid black;
+  border-right: 0.5pt solid black;
   border-bottom: none;
   border-left: none;
   mso-background-source: auto;
@@ -722,7 +722,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: windowtext;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -734,8 +734,8 @@
   vertical-align: bottom;
   border-top: none;
   border-right: none;
-  border-bottom: .5pt solid black;
-  border-left: .5pt solid black;
+  border-bottom: 0.5pt solid black;
+  border-left: 0.5pt solid black;
   mso-background-source: auto;
   mso-pattern: auto;
   white-space: nowrap;
@@ -745,7 +745,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: windowtext;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -757,7 +757,7 @@
   vertical-align: bottom;
   border-top: none;
   border-right: none;
-  border-bottom: .5pt solid black;
+  border-bottom: 0.5pt solid black;
   border-left: none;
   mso-background-source: auto;
   mso-pattern: auto;
@@ -768,7 +768,7 @@
   padding: 0px;
   mso-ignore: padding;
   color: windowtext;
-  font-size: 11.0pt;
+  font-size: 11pt;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -779,10 +779,98 @@
   text-align: general;
   vertical-align: bottom;
   border-top: none;
-  border-right: .5pt solid black;
-  border-bottom: .5pt solid black;
+  border-right: 0.5pt solid black;
+  border-bottom: 0.5pt solid black;
   border-left: none;
   mso-background-source: auto;
   mso-pattern: auto;
   white-space: nowrap;
+}
+
+.body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.fs {
+  font-weight: bold;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.idCotizacion {
+  font-size: xx-large;
+  font-weight: 900;
+}
+
+.b {
+  height: 20px;
+  background-color: #c5e0b3;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.btitle {
+  height: 25px;
+  background-color: #c5e0b3;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.cliente {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ori {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.vert {
+  vertical-align: middle;
+}
+
+.cen {
+  text-align: center;
+}
+
+.obstotal {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-gap: 1em;
+}
+
+.total {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.font {
+  font-size: large;
+}
+
+.obser {
+  text-align: start;
+}
+
+.title {
+  height: 20px;
+  background-color: #c5e0b3;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.firma {
+  display: grid;
+  justify-content: start;
+  margin-right: 10px;
+  text-align: left;
 }
