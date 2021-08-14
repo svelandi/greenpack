@@ -109,7 +109,7 @@ var editor = new FroalaEditor(
       `<html>
         <body>
           <div style="text-align:center">
-            <img src="https://greenpack.teenustest.com/upload/img/IMG-1627315270-60fedc4675fb0.jpg" alt="Greenpack" style="width:30%">
+            <img src="https://greenpack.teenustest.com/images/greenpack_logo_verde.png" alt="Greenpack" style="width:30%">
           </div>   
           <p>Señor(a) ${$("#nameClient").val()}</p>
           <p>De acuerdo con su solicitud, adjuntamos la cotización, la cual podrá leer haciendo clic en el siguiente enlace <a href="${$('#cotiz').html()}" target="_blank"> Clic aquí</a></p>  
