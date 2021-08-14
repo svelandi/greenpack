@@ -213,6 +213,7 @@ if (isset($_GET["id"])) {
         </div>
         <label id="vendedor" hidden><?= $admin->getName() ?> <?= $admin->getLastName() ?></label>
         <label id="email" hidden><?= $admin->getEmail() ?></label>
+        <label id="cotiz" hidden><?= $file = "http://" . $_SERVER["HTTP_HOST"] . "/services/generate-quotation.php?id=" . $_GET["id"]; ?></label>
         <!-- <div id="load_pdf"> -->
       </div>
       <?php include("../partials/footer.html"); ?>

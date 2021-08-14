@@ -112,8 +112,8 @@ var editor = new FroalaEditor(
             <img src="/images/greenpack_logo_verde.png" alt="Greenpack" style="width:30%">
           </div>   
           <p>Señor(a) ${$("#nameClient").val()}</p>
-          <p>De acuerdo con su solicitud, adjuntamos la cotización, la cual podrá leer haciendo clic en el enlace
-          </p>
+          <p>De acuerdo con su solicitud, adjuntamos la cotización, la cual podrá leer ehaciendo clic en el sigueinte enlace</p>
+          <p>${$('#cotiz').html()}</p>  
           <p>Cualquier inquietud que tenga estamos para servirle</p>
           <p>Cordialmente,</p>
           <b>${$("#vendedor").html()}</b><br>
