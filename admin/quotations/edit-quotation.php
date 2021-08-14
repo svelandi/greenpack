@@ -204,9 +204,10 @@ if (isset($_GET["id"])) {
             </div>
 
             <div class="row" style="margin-bottom: 20px; margin-top: 20px;">
-              <div class="col text-center"><a class="btn btn-danger btn-lg" href="/admin/quotations/#no-solved"><i class="material-icons">arrow_back</i> Regresar</a></div>
-              <div class="col text-center"><button onclick="recalculate()" class="btn btn-info btn-lg"><i class="material-icons">trending_up</i> Calcular Precios</button></div>
+              <!-- <div class="col text-center"><a class="btn btn-danger btn-lg" href="/admin/quotations/#no-solved"><i class="material-icons">arrow_back</i></a></div> -->
+              <div class="col text-center"><button onclick="recalculate()" class="btn btn-info btn-lg"><i class="material-icons">trending_up</i> Recalcular Precios</button></div>
               <div class="col text-center"><button onclick="update()" class="btn btn-info btn-lg"><i class="material-icons md-48">update</i> Actualizar</button></div>
+              <div class="col text-center"><a class="btn btn-primary btn-lg" href="<?= $file = "http://" . $_SERVER["HTTP_HOST"] . "/services/generate-quotation.php?id=" . $_GET["id"]; ?>" role="button" target="_blank"><i class="far fa-eye"></i> Ver Cotización</a> </div>
               <div class="col text-center"><button onclick="$('#modalContentEmail').modal()" class="btn btn-primary btn-lg"><i class="material-icons">email</i> Enviar Cotización</button></div>
             </div>
           </div>
