@@ -213,11 +213,11 @@ if (isset($_GET["id"])) {
         </div>
         <label id="vendedor" hidden><?= $admin->getName() ?> <?= $admin->getLastName() ?></label>
         <label id="email" hidden><?= $admin->getEmail() ?></label>
-        <div id="load_pdf">
-        </div>
-        <?php include("../partials/footer.html"); ?>
+        <!-- <div id="load_pdf"> -->
       </div>
+      <?php include("../partials/footer.html"); ?>
     </div>
+  </div>
   </div>
 
 
