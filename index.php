@@ -149,8 +149,8 @@ $conversor = new ConversorDate(); ?>
                 <i class="far fa-lightbulb" style="    color: rgb(19, 109, 8);height: 70px;font-size: -webkit-xxx-large;"></i>
               </span>
 
-              <span class="counter js-counter notranslate" data-from="0" data-to="220" data-speed="5000" data-refresh-interval="50" id="innovations">220</span>
-              <span class="counter-label">Innovaciones <br>Realizadas</span>
+              <span class="counter js-counter notranslate" data-from="0" data-to="120000" data-speed="6000" data-refresh-interval="50" id="innovations">220</span>
+              <span class="counter-label">Productos <br>Elaborados</span>
 
             </div>
           </div>
@@ -159,7 +159,7 @@ $conversor = new ConversorDate(); ?>
               <span class="icon">
                 <i class="fas fa-box-open" style="color: rgb(19, 109, 8);height: 70px;font-size: -webkit-xxx-large;"></i>
               </span>
-              <span class="counter js-counter notranslate" data-from="0" data-to="700" data-speed="5000" data-refresh-interval="50" id="products">700</span>
+              <span class="counter js-counter notranslate" data-from="0" data-to="1000" data-speed="6000" data-refresh-interval="50" id="products">700</span>
               <span class="counter-label">Productos<br>Ofertados</span>
             </div>
           </div>
@@ -168,7 +168,7 @@ $conversor = new ConversorDate(); ?>
               <span class="icon">
                 <i class="fas fa-running" style="color: rgb(19, 109, 8);height: 70px;font-size: -webkit-xxx-large;"></i>
               </span>
-              <span class="counter js-counter notranslate" data-from="0" data-to="450" data-speed="5000" data-refresh-interval="50" id="clients">450</span>
+              <span class="counter js-counter notranslate" data-from="0" data-to="1000" data-speed="6000" data-refresh-interval="50" id="clients">450</span>
               <span class="counter-label">Clientes <br>Atendidos</span>
             </div>
           </div>
@@ -259,6 +259,12 @@ $conversor = new ConversorDate(); ?>
     </div>
   </section>
   <!-- end contact Area -->
+
+  <!-- Maps -->
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.349253697941!2d-74.21826218573682!3d4.7092535428958096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9d554b5afca7%3A0x449492e831b2fdb2!2sGreenpack%20S.A.S!5e0!3m2!1ses!2sco!4v1629853665346!5m2!1ses!2sco" width="1400" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
 
   <?php include("partials/basket.html"); ?>
 
@@ -358,7 +364,7 @@ $conversor = new ConversorDate(); ?>
               <h4 class="text-white mb-20 text-uppercase">${slide.header}</h4>
               <h1 class="text-uppercase text-white">${slide.title}</h1>
               <h5 class="text-white">${slide.subtitle}</h5>
-              <a href="#about" class="text-uppercase header-btn">Descubrir Ahora</a>
+              <a href="/shop/category.php?id=1&page=1" class="text-uppercase header-btn">Descubrir Ahora</a>
             </div>
           </div>
         </div>

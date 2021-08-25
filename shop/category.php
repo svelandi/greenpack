@@ -82,7 +82,7 @@
       align-items: center;
     }
 
-    .blog-banner div.text-center {
+    /* .blog-banner div.text-center {
       margin: auto;
       width: 50%;
       background: #333333c2;
@@ -91,10 +91,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
+    } */
 
     .blog-banner div.text-center h1 {
-      color: #fff !important;
+      /* color: #fff !important; */
+      color: black;
     }
 
     @media (max-width: 400px) {
@@ -149,14 +150,14 @@
 
   <!-- ================ start banner area ================= -->
   <section class="blog-banner-area" id="category">
-    <div class="container h-100" style="background: url(<?= $category->getImage() ?>) no-repeat center;" id="container-image">
-      <div class="blog-banner">
+    <div class="container" style="background: url(<?= $category->getImage() ?>) no-repeat center;" id="container-image">
+      <div class="mt-5"> <!-- blog-banner -->
         <div class="text-center">
           <h1 id="title-category"><?= $category->getDescription() ?></h1>
         </div>
-        <div class="text-center">
+        <!-- <div class="text-center">
           <a href="#categories-section" class="btn btn-success">Tú cotización en minutos</a>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>

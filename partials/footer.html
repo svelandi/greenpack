@@ -1,13 +1,16 @@
 <style>
+  .clt li {
+    color: white;
+  }
   @media (min-width: 816px) {
-    #footer1 {
-      padding-left: 79px;
-    }
-
     #footer2 {
       position: relative;
       left: -42px;
       width: 100%;
+    }
+    .footergreen {
+      display: grid;
+      grid-template-columns: 1fr 150px repeat(3, 1fr);
     }
   }
 </style>
@@ -16,14 +19,11 @@
   <div class="container">
     <div class="footer-main">
       <div class="ftr-grids-block row">
-        <div
-          class="footergreen"
-          style="display: grid; grid-template-columns: repeat(4, 1fr)"
-        >
+        <div class="footergreen">
           <div class="footer-grid">
             <img src="/images/logo-doble.png" alt="" />
           </div>
-          <div class="col-md-3 footer-grid" id="footer1">
+          <div class="footer-grid" id="footer1">
             <!-- <h3 style="color:#fff!important">Nuestro Menu</h3> -->
             <ul>
               <li><a href="/about.php">Empresa</a></li>
@@ -32,25 +32,12 @@
               <li><a href="/#contact">Contactenos</a></li>
             </ul>
           </div>
-          <div class="footer-grid" id="footer2">
-            <!-- <h3 style="color: #fff !important">Legal</h3> -->
+          <div class="footer-grid footer-grid-icon" id="footer2">
             <ul>
-              <!-- <li><a href="javascript:void(0)">Terminos y Condiciones</a></li> -->
               <li>
                 <a href="" data-toggle="modal" data-target="#exampleModalLong"
                   >Politica de Proteccion de Datos</a
                 >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-grid-icon">
-            <ul>
-              <li>
-                <a
-                  href="https://co.pinterest.com/Ventasgreenpack/"
-                  target="_blank"
-                  ><span class="print"> </span
-                ></a>
               </li>
               <li>
                 <a
@@ -69,18 +56,77 @@
                   ><span class="fb"> </span
                 ></a>
               </li>
+              <form id="form-suscribe-footer">
+                <input
+                  class="email-ftr"
+                  type="text"
+                  id="email-suscribe-form"
+                  value="Suscripciones"
+                  onfocus="this.value = '';"
+                  onblur="if (this.value == '') {this.value = 'Suscripciones';}"
+                />
+                <input type="submit" value="Enviar" />
+              </form>
             </ul>
-            <form id="form-suscribe-footer">
-              <input
-                class="email-ftr"
-                type="text"
-                id="email-suscribe-form"
-                value="Suscripciones"
-                onfocus="this.value = '';"
-                onblur="if (this.value == '') {this.value = 'Suscripciones';}"
-              />
-              <input type="submit" value="Enviar" />
-            </form>
+          </div>
+
+          <div class="footer-grid clt">
+            <h5 style="color: white">Horarios de atención</h5>
+            <ul class="clt">
+              <li>Lunes a Viernes 7:30 am a - 5:30 pm</li>
+              <li>Sabados 8:00 am a 11 am</li>
+              <li>Mosquera: (57+1) 8932631 / 35/ 38/ 42</li>
+              <li>Dirección: Cra. 5 este No. 20-69 Bodega #6</li>
+              <li>(Parque Empresarial Cabrero)</li>
+              <li>Mosquera - Cundinamarca</li>
+              <li>Nit 830.142.081-7</li>
+            </ul>
+          </div>
+          <div class="footer-grid">
+            <h5 style="color: white">Nuestras Asesoras Comerciales</h5>
+            <ul class="clt">
+              <li>
+                Daniela Mendez
+                <i class="far fa-envelope"></i> ventas@greenpack.com.co
+                <a href="https://wa.me/13227276718" target="_blank" 
+                  ><i class="fas fa-phone-alt"></i> (57) 322 7276718</a
+                >
+              </li>
+              <li>
+                Martha Mendez
+                <i class="far fa-envelope"></i> ventasbog@greenpack.com.co
+                <a href="https://wa.me/13107626472" target="_blank"
+                  ><i class="fas fa-phone-alt"></i> (57) 310 7626472</a
+                >
+              </li>
+              <li>
+                Claudia J. Alarcón
+                <i class="far fa-envelope"></i> ventas2@greenpack.com.co
+                <a href="https://wa.me/13002043631" target="_blank"
+                  ><i class="fas fa-phone-alt"></i> (57) 300 2043631</a
+                >
+              </li>
+              <li>
+                Bibiana Paez
+                <i class="far fa-envelope"></i> ventas5@greenpack.com.co
+                <a href="https://wa.me/13024009682" target="_blank"
+                  ><i class="fas fa-phone-alt"></i> (57) 302 4009682</a
+                >
+              </li>
+              <li>
+                Olga M. Mora <i class="far fa-envelope"></i> v3@greenpack.com.co
+                <a href="https://wa.me/13188025782" target="_blank"
+                  ><i class="fas fa-phone-alt"></i> (57) 318 8025782</a
+                >
+              </li>
+              <li>
+                Martha Torres
+                <i class="far fa-envelope"></i> v1@greenpack.com.co
+                <a href="https://wa.me/13002046825" target="_blank"
+                  ><i class="fas fa-phone-alt"></i> (57) 300 2046825</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
         <div class="clearfix"></div>
