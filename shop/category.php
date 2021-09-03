@@ -151,9 +151,10 @@
   <!-- ================ start banner area ================= -->
   <section class="blog-banner-area" id="category">
     <div class="container" style="background: url(<?= $category->getImage() ?>) no-repeat center;" id="container-image">
-      <div class="mt-5"> <!-- blog-banner -->
+      <div class="mt-5">
+        <!-- blog-banner -->
         <div class="text-center">
-          <h1 id="title-category"><?= $category->getDescription() ?></h1>
+          <h1 id="title-category"><?= strtoupper($category->getName()) ?></h1>
         </div>
         <!-- <div class="text-center">
           <a href="#categories-section" class="btn btn-success">Tú cotización en minutos</a>
@@ -175,6 +176,7 @@
               <li class="common-filter">
                 <form action="#">
                   <ul>
+                    <li><a id="" href="http://greenpack/shop/menu.php?id=1&page=1"> <span> Menú Productos</span></a></li>
                     <?php foreach ($categories as $catego) {
                       $categoriesChildren = $categoryDao->findChildren($catego->getId()); ?>
                       <?php if (count($categoriesChildren) > 0) { ?>
