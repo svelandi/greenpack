@@ -53,11 +53,13 @@
     .box {
       background: lightgray;
       border-radius: 1em;
-      width: 50%;
+      width: 60%;
       padding: 20px;
       position: relative;
       top: 250px;
-      left: 550px;
+      left: 480px;
+      z-index: 2000;
+      opacity: 0.9;
     }
 
     .menu {
@@ -76,7 +78,7 @@
     }
 
     .menu ul li a {
-      display: inline-block;
+      /* display: inline-block; */
       color: white;
       background: green;
       padding: 10px;
@@ -102,6 +104,13 @@
       width: 100%;
       text-align: center;
     }
+
+    /* .transition {
+      -webkit-transform: scale(2);
+      -moz-transform: scale(2);
+      -o-transform: scale(2);
+      transform: scale(2);
+    } */
 
     .blog-banner-area::after {
       background: #fff !important;
@@ -179,7 +188,7 @@
 
   <!-- ================ start banner area ================= -->
   <section class="blog-banner-area" id="category">
-    <div class="container" style="background: url(<?= $category->getImage() ?>) no-repeat center;" id="container-image">
+    <div class="container zoom" style="background: url(<?= $category->getImage() ?>) no-repeat center;" id="container-image">
       <div class="">
         <h4 class="box box0" style="margin:13px">Bolsas para repostería, dulces o chocolates. fabricadas con cartón Earth Pact, 100% en
           fíbra de caña de azúcar, este es un material resistente, reciclable y biodegradable, el cual
@@ -203,10 +212,10 @@
 
   <div class="menu">
     <ul>
-      <li><a href="http://greenpack/shop/category.php?id=1&page=1" class="icon-bolsas">Bolsas</a></li>
-      <li><a href="http://greenpack/shop/category.php?id=46&page=1" class="icon-cajasE">Cajas Exhibir</a></li>
-      <li><a href="http://greenpack/shop/category.php?id=64&page=1" class="icon-cajasS">Cajas Servir</a></li>
-      <li><a href="http://greenpack/shop/category.php?id=69&page=1" class="icon-cajasL">Cajas Llevar</a></li>
+      <li><a href="http://greenpack.teenustest.com/shop/category.php?id=1&page=1" class="icon-bolsas">Bolsas</a></li>
+      <li><a href="http://greenpack.teenustest.com/shop/category.php?id=46&page=1" class="icon-cajasE">Cajas Exhibir</a></li>
+      <li><a href="http://greenpack.teenustest.com/shop/category.php?id=64&page=1" class="icon-cajasS">Cajas Servir</a></li>
+      <li><a href="http://greenpack.teenustest.com/shop/category.php?id=69&page=1" class="icon-cajasL">Cajas Llevar</a></li>
     </ul>
   </div>
 
@@ -255,6 +264,13 @@
         $(`.box3`).hide();
       });
 
+    });
+    $(document).ready(function() {
+      $('.zoom').hover(function() {
+        $(this).addClass('transition');
+      }, function() {
+        $(this).removeClass('transition');
+      });
     });
   </script>
 </body>
