@@ -242,19 +242,19 @@
       $(`.box3`).hide();
 
       $(`.icon-bolsas`).mouseenter(function() {
-        $(`.box0`).show();
+        $(`.box0`).show(500);
       });
 
       $(`.icon-cajasE`).mouseenter(function() {
-        $(`.box1`).show();
+        $(`.box1`).show(250);
       });
 
       $(`.icon-cajasS`).mouseenter(function() {
-        $(`.box2`).show();
+        $(`.box2`).show(250);
       });
 
       $(`.icon-cajasL`).mouseenter(function() {
-        $(`.box3`).show();
+        $(`.box3`).show(250);
       });
 
       $(`.icon-bolsas, .icon-cajasE, .icon-cajasS, .icon-cajasL`).mouseleave(function() {
