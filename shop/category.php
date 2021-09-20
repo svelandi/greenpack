@@ -82,6 +82,10 @@
       align-items: center;
     }
 
+    #Menu-Principal {
+      font-size: 20px;
+    }
+
     /* .blog-banner div.text-center {
       margin: auto;
       width: 50%;
@@ -176,11 +180,11 @@
               <li class="common-filter">
                 <form action="#">
                   <ul>
-                    <li><a id="" href="http://greenpack/shop/menu.php?id=1&page=1"> <span> Menú Productos</span></a></li>
+                    <li><a href="/shop/menu.php?id=1&page=1" style="color: green;font-size: large;">Menú Productos</a></li>
                     <?php foreach ($categories as $catego) {
                       $categoriesChildren = $categoryDao->findChildren($catego->getId()); ?>
                       <?php if (count($categoriesChildren) > 0) { ?>
-                        <li class="filter-list text-capitalize"><a href="#<?= $catego->getId() ?>" class="accordion" data-toggle="collapse" data-parent="#accordion"><?= $catego->getName() ?></a>
+                        <li class="filter-list text-capitalize"><a  id="menu-<?= $catego->getId() ?>" href="#<?= $catego->getId() ?>" class="accordion" data-toggle="collapse" data-parent="#accordion"><?= $catego->getName() ?></a>
                           <ul id="<?= $catego->getId() ?>" class="category collapse">
                             <?php foreach ($categoriesChildren as  $cat) { ?>
                               <li class="child-category text-capitalize"><a id="<?= $cat->getId() ?>" href="category.php?id=<?= $cat->getId() ?>&page=1"><?= $cat->getName() ?> <span> (<?= count($productDao->findByCategory($cat->getId())); ?>)</span></a></li>
@@ -224,9 +228,9 @@
             <div class="row" id="products">
               <?php
               $id = $_GET["id"];
-              $products = $productDao->findByCategoryWithLimit($_GET["id"], $pageInit, $productsperPage);
+              $products = $productDao->findByCategoryWithLimit($id, $pageInit, $productsperPage);
               if (!$products)
-                $products = $productDao->findByCategoryWith($pageInit, $productsperPage);
+                $products = $productDao->findByCategoryWith($id, $pageInit, $productsperPage);
               foreach ($products as $product) { ?>
                 <div class="col-lg-3">
                   <div class="card text-center card-product zoom-in">
@@ -349,6 +353,7 @@
       }
 
     }
+    
   </script>
 
   <script src="/js/jquery-3.2.1.min.js"></script>

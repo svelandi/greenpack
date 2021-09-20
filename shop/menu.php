@@ -52,14 +52,15 @@
 
     .box {
       background: lightgray;
-      border-radius: 1em;
+      border-radius: 10px 0px 0px 10px;
+      float: right;
       width: 60%;
       padding: 20px;
       position: relative;
       top: 250px;
-      left: 480px;
       z-index: 2000;
       opacity: 0.9;
+      margin-right: 0px;
     }
 
     .menu {
@@ -92,6 +93,10 @@
       padding: 10px 30px;
     }
 
+    .menu-banner-area {
+      height: 600px
+    }
+
     #container-image {
       background-size: cover !important;
       background-position: center;
@@ -112,34 +117,7 @@
       transform: scale(2);
     } */
 
-    .blog-banner-area::after {
-      background: #fff !important;
-    }
-
-    .card-product__title {
-      font-size: 16px;
-    }
-
-    .blog-banner div.text-center:first {
-      margin: auto;
-      width: 50%;
-      background: #333333c2;
-      color: #fff !important;
-      height: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .blog-banner div.text-center h1 {
-      /* color: #fff !important; */
-      color: black;
-    }
-
     @media (max-width: 400px) {
-      .blog-banner div.text-center:first h1 {
-        font-size: 14px;
-      }
 
       #title-category {
         font-size: 20px !important;
@@ -187,22 +165,22 @@
   <?php include('../partials/header_1.html'); ?>
 
   <!-- ================ start banner area ================= -->
-  <section class="blog-banner-area" id="category">
-    <div class="container zoom" style="background: url(<?= $category->getImage() ?>) no-repeat center;" id="container-image">
+  <section class="menu-banner-area" id="menu_products">
+    <div class="container zoom" style="background: url(<?= $category->getImage() ?>) no-repeat center;padding-right:0px" id="container-image">
       <div class="">
-        <h4 class="box box0" style="margin:13px">Bolsas para repostería, dulces o chocolates. fabricadas con cartón Earth Pact, 100% en
+        <h4 class="box box0">Bolsas para repostería, dulces o chocolates. fabricadas con cartón Earth Pact, 100% en
           fíbra de caña de azúcar, este es un material resistente, reciclable y biodegradable, el cual
           puede ser laminado con PLA (Ácido Poliláctico a base de maíz), material que también es
           usado en las ventanas de la caja para que tu producto sea visible.</h4>
-        <h4 class="box box1" style="margin:13px">Cajas1 para repostería, dulces o chocolates. fabricadas con cartón Earth Pact, 100% en
+        <h4 class="box box1">Cajas1 para repostería, dulces o chocolates. fabricadas con cartón Earth Pact, 100% en
           fíbra de caña de azúcar, este es un material resistente, reciclable y biodegradable, el cual
           puede ser laminado con PLA (Ácido Poliláctico a base de maíz), material que también es
           usado en las ventanas de la caja para que tu producto sea visible.</h4>
-        <h4 class="box box2" style="margin:13px">Cajas2 para repostería, dulces o chocolates. fabricadas con cartón Earth Pact, 100% en
+        <h4 class="box box2">Cajas2 para repostería, dulces o chocolates. fabricadas con cartón Earth Pact, 100% en
           fíbra de caña de azúcar, este es un material resistente, reciclable y biodegradable, el cual
           puede ser laminado con PLA (Ácido Poliláctico a base de maíz), material que también es
           usado en las ventanas de la caja para que tu producto sea visible.</h4>
-        <h4 class="box box3" style="margin:13px">Cajas3 para repostería, dulces o chocolates. fabricadas con cartón Earth Pact, 100% en
+        <h4 class="box box3">Cajas3 para repostería, dulces o chocolates. fabricadas con cartón Earth Pact, 100% en
           fíbra de caña de azúcar, este es un material resistente, reciclable y biodegradable, el cual
           puede ser laminado con PLA (Ácido Poliláctico a base de maíz), material que también es
           usado en las ventanas de la caja para que tu producto sea visible.</h4>
@@ -212,10 +190,14 @@
 
   <div class="menu">
     <ul>
-      <li><a href="http://greenpack.teenustest.com/shop/category.php?id=1&page=1" class="icon-bolsas">Bolsas</a></li>
+      <li><a href="/shop/category.php?id=1&page=1" class="icon-bolsas">Bolsas</a></li>
+      <li><a href="/shop/category.php?id=45&page=1" class="icon-cajasE">Cajas Exhibir</a></li>
+      <li><a href="/shop/category.php?id=63&page=1" class="icon-cajasS">Cajas Servir</a></li>
+      <li><a href="/shop/category.php?id=68&page=1" class="icon-cajasL">Cajas Llevar</a></li>
+      <!-- <li><a href="http://greenpack.teenustest.com/shop/category.php?id=1&page=1" class="icon-bolsas">Bolsas</a></li>
       <li><a href="http://greenpack.teenustest.com/shop/category.php?id=46&page=1" class="icon-cajasE">Cajas Exhibir</a></li>
       <li><a href="http://greenpack.teenustest.com/shop/category.php?id=64&page=1" class="icon-cajasS">Cajas Servir</a></li>
-      <li><a href="http://greenpack.teenustest.com/shop/category.php?id=69&page=1" class="icon-cajasL">Cajas Llevar</a></li>
+      <li><a href="http://greenpack.teenustest.com/shop/category.php?id=69&page=1" class="icon-cajasL">Cajas Llevar</a></li> -->
     </ul>
   </div>
 
@@ -242,7 +224,7 @@
       $(`.box3`).hide();
 
       $(`.icon-bolsas`).mouseenter(function() {
-        $(`.box0`).show(500);
+        $(`.box0`).show(250);
       });
 
       $(`.icon-cajasE`).mouseenter(function() {

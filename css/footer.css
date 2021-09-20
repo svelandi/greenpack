@@ -34,7 +34,7 @@ select.country:hover {
 .footer-grid ul li a {
     font-size: 1em;
     color: #fff;
-    display: block;
+    /* display: block; */
 }
 
 .footer-grid ul li a:hover {
@@ -76,7 +76,7 @@ select.country:hover {
 
 .footer-grid-icon ul li a {
     display: block;
-    line-height: 0px;
+    /* line-height: 0px; */
 }
 
 .footer-grid-icon ul li a span {

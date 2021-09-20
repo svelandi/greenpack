@@ -129,7 +129,7 @@ $conversor = new ConversorDate(); ?>
       <div class="row d-flex justify-content-center align-items-center">
         <div class="menu-content pb-40 col-lg-8">
           <div class="title text-center">
-            <h1 class="mb-10" style="font-size: 2.5rem; font-weight: bold;     font-family: 'Poppins', sans-serif;color: #222222;line-height: 1.2em !important;">Con Materiales Biodegradables y Convertibles en abono</h1>
+            <h1 class="mb-10" style="font-size: 2.5rem; font-weight: bold; font-family: 'Poppins', sans-serif;color: #222222;line-height: 1.2em !important;">Con Materiales Biodegradables y Convertibles en abono</h1>
             <p style="font-size: 0.9375rem;font-family: 'Poppins', sans-serif;font-weight: 300;color: #656565;line-height: 1.6;margin-top: 0;margin-bottom: 1rem;">Un empaque innovador y totalmente ecológico.</p>
           </div>
         </div>
@@ -364,7 +364,7 @@ $conversor = new ConversorDate(); ?>
               <h4 class="text-white mb-20 text-uppercase">${slide.header}</h4>
               <h1 class="text-uppercase text-white">${slide.title}</h1>
               <h5 class="text-white">${slide.subtitle}</h5>
-              <a href="/shop/category.php?id=1&page=1" class="text-uppercase header-btn">Descubrir Ahora</a>
+              <a href="/shop/menu.php?id=1&page=1" class="text-uppercase header-btn">Cotice ahora</a>
             </div>
           </div>
         </div>
