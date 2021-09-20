@@ -57,7 +57,7 @@
       width: 60%;
       padding: 20px;
       position: relative;
-      top: 250px;
+      top: 420px;
       z-index: 2000;
       opacity: 0.9;
       margin-right: 0px;
